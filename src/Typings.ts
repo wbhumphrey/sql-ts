@@ -39,6 +39,7 @@ export interface Column {
   type: string,
   optional: boolean,
   nullable: boolean
+  virtual: boolean
 }
 
 /**

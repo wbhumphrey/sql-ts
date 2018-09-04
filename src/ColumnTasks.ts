@@ -21,7 +21,8 @@ export async function getColumnsForTable (db: knex, table: TableDefinition, conf
     nullable: c.isNullable,
     name: c.name,
     type: c.type,
-    optional: c.isOptional
+    optional: c.isOptional,
+    virtual: !!c.isVirtual
   } as Column))
 }
 /**

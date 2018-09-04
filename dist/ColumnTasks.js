@@ -61,7 +61,8 @@ function getColumnsForTable(db, table, config) {
                             nullable: c.isNullable,
                             name: c.name,
                             type: c.type,
-                            optional: c.isOptional
+                            optional: c.isOptional,
+                            virtual: !!c.isVirtual
                         }); })];
             }
         });

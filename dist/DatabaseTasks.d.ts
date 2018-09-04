@@ -18,6 +18,7 @@ export declare function decorateDatabase(database: Database, config: any): {
             type: string;
             optional: boolean;
             nullable: boolean;
+            virtual: boolean;
         }[];
         name: string;
         schema: string;

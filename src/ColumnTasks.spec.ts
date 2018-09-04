@@ -136,7 +136,8 @@ describe('ColumnTasks', () => {
             nullable: false,
             name: 'cname',
             type: 'ctype',
-            optional: false
+            optional: false,
+            virtual: false
           }
         ])
       })

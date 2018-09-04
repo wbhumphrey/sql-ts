@@ -73,8 +73,9 @@ var default_1 = /** @class */ (function () {
                             .select(db.raw('(CASE WHEN is_nullable = \'NO\' THEN 0 ELSE 1 END) AS isNullable'))
                             .select(db.raw('(SELECT CASE WHEN LOCATE(\'auto_increment\', extra) <> 0 OR COLUMN_DEFAULT IS NOT NULL THEN 1 ELSE 0 END) AS isOptional'))
                             .select('data_type AS type')
+                            .select('extra')
                             .where({ table_name: table, table_schema: schema })
-                            .map(function (c) { return (__assign({}, c, { isNullable: !!c.isNullable, isOptional: c.isOptional === 1 })); })];
+                            .map(function (c) { return (__assign({}, c, { isNullable: !!c.isNullable, isOptional: c.isOptional === 1, isVirtual: c.extra.includes('VIRTUAL') })); })];
                     case 1: return [2 /*return*/, _a.sent()];
                 }
             });

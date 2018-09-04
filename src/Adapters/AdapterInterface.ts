@@ -15,6 +15,7 @@ export interface ColumnDefinition {
   type: string;
   isNullable: boolean;
   isOptional: boolean;
+  isVirtual?: boolean;
 }
 
 export interface AdapterInterface {

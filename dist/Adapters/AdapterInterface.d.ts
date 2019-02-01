@@ -1,4 +1,3 @@
-/// <reference types="knex" />
 import * as knex from 'knex';
 export interface DatabaseDefinition {
     tables: TableDefinition[];
@@ -13,6 +12,7 @@ export interface ColumnDefinition {
     isNullable: boolean;
     isOptional: boolean;
     isVirtual?: boolean;
+    extra?: any;
 }
 export interface AdapterInterface {
     getAllTables(db: knex, schemas: string[]): Promise<TableDefinition[]>;

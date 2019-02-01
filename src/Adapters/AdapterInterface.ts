@@ -16,6 +16,7 @@ export interface ColumnDefinition {
   isNullable: boolean;
   isOptional: boolean;
   isVirtual?: boolean;
+  extra?: any;
 }
 
 export interface AdapterInterface {

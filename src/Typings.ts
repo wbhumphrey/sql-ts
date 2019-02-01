@@ -40,6 +40,7 @@ export interface Column {
   optional: boolean,
   nullable: boolean
   virtual: boolean
+  extra: any
 }
 
 /**

@@ -38,6 +38,7 @@ export interface Column {
     optional: boolean;
     nullable: boolean;
     virtual: boolean;
+    extra: any;
 }
 /**
  * The JSON definition of a taboe for importing and exporting.
